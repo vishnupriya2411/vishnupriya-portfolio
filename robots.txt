@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vishnupriya2411.github.io/vishnupriya-portfolio/sitemap.xml
+Sitemap: https://vishnupriya-portfolio-rho.vercel.app/sitemap.xml
