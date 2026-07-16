@@ -1,0 +1,8 @@
+gene,logFC,drug,action
+PCDH9/17,-2.083,Valproic Acid,up-regulates
+BEX1,-1.875,Valproic Acid,up-regulates
+TMSB4X,-1.871,Aspirin,up-regulates
+GOLGA8B/8A,-1.667,Valproic Acid,up-regulates
+ZBTB46,1.212,Vorinostat,down-regulates
+MT1X,1.415,Estradiol,down-regulates
+MSH4,1.706,Estradiol,down-regulates
