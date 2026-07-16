@@ -10,10 +10,6 @@ docs/
 *.tex
 *.Rhistory
 
-# Stale local resume copy (old email); the live resume is served from
-# https://vishnupriya2411.github.io/assets/resume/
-assets/resume/
-
 # Editable sources — CSS/JS are already inlined into index.html
 assets/css/
 assets/js/
