@@ -4,7 +4,7 @@ Source for my personal portfolio site. I'm a computational bioinformatician, and
 most of my work sits in cancer genomics, spatial and single-cell transcriptomics,
 multi-omics, and building NGS pipelines that other people can actually rerun.
 
-Live at **https://vishnupriya-portfolio-rho.vercel.app/**
+Live at **https://vishnupriya-nuthanapati.vercel.app/**
 
 It's one static page. No framework, no build step. The CSS and JavaScript are
 inlined into `index.html`, and every image it needs lives in `assets/`, so the
