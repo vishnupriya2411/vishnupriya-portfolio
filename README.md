@@ -4,7 +4,7 @@ Personal portfolio of **Vishnu Priya Nuthanapati**, computational bioinformatici
 (cancer genomics, spatial & single-cell transcriptomics, multi-omics, and
 reproducible NGS pipelines).
 
-**Live site:** https://vishnupriya2411.github.io/vishnupriya-portfolio/
+**Live site:** https://vishnupriya-portfolio-rho.vercel.app/
 
 Static HTML/CSS/JS — no build step, no framework. `index.html` has all CSS and JS
 inlined; the `assets/` folder holds every image, so the site renders identically
@@ -46,5 +46,12 @@ python3 -m http.server 8000   # then open http://localhost:8000
 
 ## Hosting
 
-Deployed via **GitHub Pages** (Settings → Pages → deploy from `main` / root).
-Also works on any static host (e.g. Vercel via `vercel.json`). No build step.
+The live site is deployed to **Vercel** (direct upload, no Git integration — this
+repo is the source archive). To redeploy after changing files:
+
+```bash
+npx vercel@latest deploy --prod --yes
+```
+
+`.vercelignore` keeps `figures/`, `docs/`, and the resume source out of the
+deployment. The site is plain static files, so it also runs on any static host.

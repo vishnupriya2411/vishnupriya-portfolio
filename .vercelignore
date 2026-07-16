@@ -1,0 +1,22 @@
+# Keep the Vercel deployment to just the site itself.
+
+.git
+.gitignore
+node_modules
+
+# Provenance / source material — not part of the served site
+figures/
+docs/
+*.tex
+*.Rhistory
+
+# Stale local resume copy (old email); the live resume is served from
+# https://vishnupriya2411.github.io/assets/resume/
+assets/resume/
+
+# Editable sources — CSS/JS are already inlined into index.html
+assets/css/
+assets/js/
+
+# OS cruft
+.DS_Store
