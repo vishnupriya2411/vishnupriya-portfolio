@@ -27,7 +27,7 @@ figures/                       # reproducible figure generation (provenance)
 robots.txt, sitemap.xml, vercel.json
 ```
 
-## Project figures are real, not decorative
+## Project figures
 
 The figures shown under **Projects** are generated from actual analysis outputs:
 
