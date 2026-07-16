@@ -1,57 +1,64 @@
-# Vishnu Priya Nuthanapati — Portfolio
+# Vishnu Priya Nuthanapati's Portfolio
 
-Personal portfolio of **Vishnu Priya Nuthanapati**, computational bioinformatician
-(cancer genomics, spatial & single-cell transcriptomics, multi-omics, and
-reproducible NGS pipelines).
+Source for my personal portfolio site. I'm a computational bioinformatician, and
+most of my work sits in cancer genomics, spatial and single-cell transcriptomics,
+multi-omics, and building NGS pipelines that other people can actually rerun.
 
-**Live site:** https://vishnupriya-portfolio-rho.vercel.app/
+Live at **https://vishnupriya-portfolio-rho.vercel.app/**
 
-Static HTML/CSS/JS — no build step, no framework. `index.html` has all CSS and JS
-inlined; the `assets/` folder holds every image, so the site renders identically
-wherever it is hosted (this repo exists so the assets travel with the page).
+It's one static page. No framework, no build step. The CSS and JavaScript are
+inlined into `index.html`, and every image it needs lives in `assets/`, so the
+site renders the same wherever you put it. That's really why this repo exists:
+the page and its assets stay together.
 
-## Structure
+## What's in here
 
 ```
-index.html                     # the whole site (HTML + inline CSS/JS)
+index.html         the entire site
 assets/
   images/
-    Vishnu_Headshot.jpg        # portrait (About section)
-    icons/                     # company + technology logos
-    projects/                  # project result figures (SVG/PNG)
-    og-image.png               # social share card
+    Vishnu_Headshot.jpg
+    icons/         company and technology logos
+    projects/      the figures shown on each project
+    og-image.png   link preview card
   favicon.svg, favicon.ico
-figures/                       # reproducible figure generation (provenance)
-  p002/  make_p2_figures.R + data   # Trinity assembly + BLASTp figures
-  p003/  make_p3_figures.R + data   # miRNA-gene network drug-target figure
+figures/           scripts that regenerate the project figures
+  p002/            Trinity assembly and BLASTp charts
+  p003/            miRNA gene network drug target chart
 robots.txt, sitemap.xml, vercel.json
 ```
 
 ## Project figures
 
-The figures shown under **Projects** are generated from actual analysis outputs:
+The charts on the project cards aren't mockups. Each one comes out of the real
+analysis:
 
-- **P001 — Single-Cell Transcriptomics:** UMAP and volcano from the
-  [Single-Cell-Transcriptomics](https://github.com/vishnupriya2411/Single-Cell-Transcriptomics) repo.
-- **P002 — Bulk RNA-seq (APOE):** `figures/p002/make_p2_figures.R` regenerates the
-  assembly-contiguity and BLASTp-identity figures from the pipeline result files.
-- **P003 — miRNA-Gene Networks (Schizophrenia):** a real Cytoscape network plus
-  `figures/p003/make_p3_figures.R` for the drug-target chart.
+* **P001, single-cell transcriptomics.** The UMAP and volcano are exported
+  straight from my
+  [Single-Cell-Transcriptomics](https://github.com/vishnupriya2411/Single-Cell-Transcriptomics)
+  repo.
+* **P002, bulk RNA-seq on APOE orthologs.** Running
+  `figures/p002/make_p2_figures.R` rebuilds the assembly contiguity and BLASTp
+  identity charts from the pipeline's own result files.
+* **P003, miRNA gene networks in schizophrenia.** The network is a real Cytoscape
+  export, and `figures/p003/make_p3_figures.R` produces the drug target chart.
 
-## Preview locally
+## Running it locally
 
 ```bash
-python3 -m http.server 8000   # then open http://localhost:8000
+python3 -m http.server 8000
 ```
 
-## Hosting
+Then open http://localhost:8000.
 
-The live site is deployed to **Vercel** (direct upload, no Git integration — this
-repo is the source archive). To redeploy after changing files:
+## Deploying
+
+The live site is on Vercel. I upload it directly instead of wiring up the Git
+integration, so this repo is just where the source lives. To ship a change:
 
 ```bash
 npx vercel@latest deploy --prod --yes
 ```
 
-`.vercelignore` keeps `figures/`, `docs/`, and the resume source out of the
-deployment. The site is plain static files, so it also runs on any static host.
+`.vercelignore` keeps the `figures/` data, `docs/`, and my resume source out of
+what actually gets deployed.
