@@ -1,0 +1,24 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/
+node_modules/
+
+# Deployment
+.vercel
+
+# Resume source & local copy — the live resume is served from
+# https://vishnupriya2411.github.io/assets/resume/ , so the stale local
+# copy (old email) and LaTeX source are kept out of this public site repo.
+/VishnuPriya_UofR_SunLab.tex
+/assets/resume/
+*.aux
+*.out
+*.synctex.gz
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
